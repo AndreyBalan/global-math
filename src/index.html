@@ -3,7 +3,7 @@
     @@include('html/_head.htm',{ "title":"Main Page | Global Math" })
     <body>
         <div class="wrapper">
-            @@include('html/_header.htm',{})
+            @@include('html/_popup.htm',{}) @@include('html/_header.htm',{})
             <main class="page">
                 <section class="hero">
                     <div class="hero__container">
@@ -192,7 +192,7 @@
                                 action="files/sendmail/sendmail.php"
                                 method="POST"
                                 data-popup-message="#form-message"
-                                data-ajax>
+                                data-dev>
                                 <div class="form__line">
                                     <div>
                                         <label for="name">Full Name</label>
@@ -242,7 +242,7 @@
                                         placeholder="Message"></textarea>
                                 </div>
 
-                                <button class="form-btn">Contact Now</button>
+                                <button class="form-btn" type="submit">Contact Now</button>
                             </form>
                         </div>
                     </div>
