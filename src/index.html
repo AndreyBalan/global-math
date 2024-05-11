@@ -187,35 +187,63 @@
                                 <div class="separator"></div>
                                 <h3 class="contact__heading">Social Media</h3>
                             </div>
-                            <div class="contact__form">
+                            <form
+                                class="contact__form"
+                                action="files/sendmail/sendmail.php"
+                                method="POST"
+                                data-popup-message="#form-message"
+                                data-ajax>
                                 <div class="form__line">
                                     <div>
-                                        <label for="">Full Name</label>
-                                        <input type="text" placeholder="Devid Wonder " />
+                                        <label for="name">Full Name</label>
+                                        <input
+                                            type="text"
+                                            id="name"
+                                            name="name"
+                                            data-error="Incorrect name"
+                                            data-required
+                                            placeholder="Devid Wonder " />
                                     </div>
                                     <div>
-                                        <label for="">Email address</label>
-                                        <input type="text" placeholder="example@gmail.com " />
+                                        <label for="email">Email address</label>
+                                        <input
+                                            type="email"
+                                            id="email"
+                                            name="email"
+                                            data-required="email"
+                                            data-error="Incorrect email"
+                                            placeholder="example@gmail.com " />
                                     </div>
                                 </div>
                                 <div class="form__line">
                                     <div>
-                                        <label for="">Phone number</label>
-                                        <input type="text" placeholder="+0093342 3432 " />
+                                        <label for="phone">Phone number</label>
+                                        <input
+                                            type="text"
+                                            name="phone"
+                                            id="phone"
+                                            placeholder="+0093342 3432 " />
                                     </div>
                                     <div>
-                                        <label for="">Subject</label>
-                                        <input type="text" placeholder="Type your subject " />
+                                        <label for="subject">Subject</label>
+                                        <input
+                                            name="subject"
+                                            id="subject"
+                                            type="text"
+                                            placeholder="Type your subject " />
                                     </div>
                                 </div>
 
                                 <div>
-                                    <label for="">Message</label>
-                                    <textarea name="" id="" placeholder="Message"></textarea>
+                                    <label for="message">Message</label>
+                                    <textarea
+                                        name="message"
+                                        id="message"
+                                        placeholder="Message"></textarea>
                                 </div>
 
                                 <button class="form-btn">Contact Now</button>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </section>
