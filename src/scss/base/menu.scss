@@ -6,11 +6,11 @@
     &__body {
         @media (max-width: $mobile) {
             position: fixed;
-            width: 100%;
-            height: 100%;
-            left: -100%;
-            top: 0;
+            right: -100%;
+            top: toRem(100);
+            @include adaptiveValue("top", 140, 85);
             overflow: auto;
+            padding: toRem(48);
             // padding: toRem(50) toRem(15) toRem(15) toRem(30);
             transition: left 0.3s;
             background: #fff;
@@ -18,20 +18,21 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            border-radius: toRem(4) toRem(0) toRem(0) toRem(16);
             &::before {
                 content: "";
                 position: fixed;
                 width: 100%;
                 height: toRem(70);
-                left: -100%;
+                right: -100%;
                 top: 0;
                 transition: left 0.3s;
                 z-index: 2;
             }
             .menu-open & {
-                left: 0;
+                right: 0;
                 &::before {
-                    left: 0;
+                    right: 0;
                 }
             }
         }
@@ -58,6 +59,8 @@
         display: block;
         position: relative;
         width: toRem(30);
+        @include adaptiveValue("width", 32, 24);
+        @include adaptiveValue("height", 22, 16);
         height: toRem(18);
         z-index: 5;
         @media (any-hover: none) {
@@ -100,4 +103,20 @@
             }
         }
     }
+}
+
+body::after {
+    content: "";
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    display: none;
+}
+
+.menu-open body::after {
+    display: block;
 }

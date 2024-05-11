@@ -1,0 +1,130 @@
+.join {
+    // .join__container
+    &__container {
+    }
+    // .join__top
+    &__top {
+        @include adaptiveValue("padding-top", 80, 40);
+        @include adaptiveValue("padding-bottom", 80, 40);
+        background: $colorBlue;
+        padding-left: toRem(40);
+        padding-top: toRem(40);
+        background-image: url("@img/tagline-bg.png");
+        background-repeat: no-repeat;
+        background-position: right bottom;
+    }
+    // .join__wrapper
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media (max-width: $mobile) {
+            flex-wrap: wrap;
+            gap: toRem(25);
+        }
+    }
+    // .join__content
+    &__content {
+        padding-left: toRem(40);
+        max-width: toRem(660);
+        @media (max-width: $tablet) {
+            padding-left: toRem(0);
+            max-width: toRem(420);
+        }
+    }
+    // .join__heading
+    &__heading {
+        color: #fff;
+        @include adaptiveValue("font-size", 48, 20);
+        font-weight: 600;
+        line-height: normal;
+    }
+    // .join__descr
+    &__descr {
+        color: #fff;
+        font-size: toRem(16);
+        font-weight: 500;
+        line-height: normal;
+        margin-top: toRem(30);
+        @media (max-width: $mobile) {
+            display: none;
+        }
+    }
+    // .join__btn
+    &__btn {
+        color: $colorDark;
+        font-weight: 500;
+        line-height: normal;
+        padding: toRem(16) toRem(24);
+        border-radius: toRem(64);
+        background: #fff;
+        margin-right: toRem(40);
+        transition: all 0.3s;
+        @media (max-width: $tablet) {
+            margin-right: toRem(0);
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.35);
+            }
+        }
+    }
+    // .join__bottom
+    &__bottom {
+        @include adaptiveValue("padding-top", 120, 72);
+        @include adaptiveValue("padding-bottom", 120, 72);
+        display: flex;
+        justify-content: center;
+        @media (max-width: $tablet) {
+            text-align: center;
+        }
+    }
+    // .join__socials
+    &__socials {
+        display: flex;
+        align-items: center;
+        @include adaptiveValue("gap", 40, 24);
+        @media (max-width: $tablet) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    // .join__logo
+    &__logo {
+        @media (max-width: $tablet) {
+            width: 100%;
+        }
+    }
+    // .join__socials-content
+    &__socials-content {
+        max-width: toRem(310);
+        @media (max-width: $tablet) {
+            max-width: toRem(400);
+            width: 100%;
+        }
+    }
+    // .join__socials-decr
+    &__socials-decr {
+        font-size: 16px;
+        line-height: 20px; /* 125% */
+    }
+    // .join__socials-links
+    &__socials-links {
+        margin-top: toRem(24);
+        display: flex;
+        gap: toRem(20);
+        @media (max-width: $tablet) {
+            justify-content: center;
+        }
+    }
+    // .join__socials-link
+    &__socials-link {
+        color: rgba(204, 204, 204, 1);
+        transition: all 0.3s;
+        @media (any-hover: hover) {
+            &:hover {
+                color: $colorBlue;
+            }
+        }
+    }
+}

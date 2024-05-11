@@ -153,6 +153,9 @@ body {
 // Підключення стилів окремих блоків
 @import "header";
 @import "footer";
+@import "join";
 
 // Підключення стилів окремих сторінок
 @import "index";
+@import "pages";
+@import "articles";

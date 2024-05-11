@@ -1,0 +1,170 @@
+// main
+.pages {
+    @include adaptiveValue("padding-top", 80, 36);
+    @include adaptiveValue("padding-bottom", 80, 36);
+    // .pages__container
+    &__container {
+    }
+    // .pages__wrapper
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        @include adaptiveValue("gap", 40, 36);
+        @media (max-width: $pc) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (max-width: $mobile) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+    // .pages__item
+    &__item {
+        display: flex;
+        padding-bottom: toRem(36);
+        flex-direction: column;
+        gap: toRem(32);
+        border-radius: toRem(12);
+        background: #fff;
+        box-shadow: 0px 4px 4px 0px #ececec;
+    }
+    // .pages__item-img
+    &__item-img {
+        padding-right: toRem(20);
+        position: relative;
+        max-width: toRem(344);
+        img {
+            max-width: 100%;
+        }
+    }
+    // .pages__item-content
+    &__item-content {
+        @include adaptiveValue("padding-left", 32, 20);
+        @include adaptiveValue("padding-right", 32, 20);
+    }
+    // .pages__item-details
+    &__item-details {
+        display: flex;
+        align-items: center;
+        @include adaptiveValue("gap", 24, 12);
+        @media (max-width: $mobile) {
+            flex-wrap: wrap;
+        }
+        @include adaptiveValue("font-size", 16, 12);
+        font-weight: 500;
+        line-height: normal;
+        p {
+            display: flex;
+            align-items: center;
+            gap: toRem(8);
+        }
+    }
+    // .pages__item-title
+    &__item-title {
+        margin-top: toRem(16);
+        color: $colorDark;
+        @include adaptiveValue("font-size", 24, 16);
+        font-weight: 600;
+        line-height: normal;
+        transition: all 0.3s;
+        &:hover {
+            color: $colorBlue;
+        }
+    }
+    // .pages__pagination
+    &__pagination {
+        @include adaptiveValue("margin-top", 80, 64);
+        @include adaptiveValue("margin-bottom", 60, 32);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: toRem(12);
+    }
+    // .pages__pagination-link
+    &__pagination-link {
+        color: #78808a;
+        font-size: toRem(16);
+        padding: toRem(11) toRem(15);
+        border-radius: 100%;
+        font-weight: 500;
+        width: toRem(40);
+        height: toRem(40);
+        line-height: normal;
+        fill: #fff;
+        // filter: drop-shadow(0px 2px 2px red);
+        box-shadow: 0px 2px 2px #d9d9d9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s;
+        @media (any-hover: hover) {
+            &:hover {
+                color: $colorBlue;
+            }
+        }
+    }
+}
+//
+
+.image-link {
+    position: absolute;
+    display: none;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: $colorBlue;
+    padding: 16px 24px;
+    justify-content: center;
+    align-items: center;
+    border-radius: toRem(64);
+    color: #fff;
+    font-weight: 500;
+    line-height: normal;
+    transition: all 0.3s;
+}
+
+.pages__item {
+    position: relative;
+}
+
+.pages__item img {
+    transition: filter 0.3s;
+}
+
+.pages__item:hover img {
+    filter: blur(5px);
+}
+
+.pages__item:hover .image-link {
+    display: flex;
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pages__item:hover .image-link:hover {
+    background: #f27095;
+}
+
+.pages__item:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    border-radius: 0px 12px 0px 0px;
+    background: linear-gradient(
+        149deg,
+        rgba(255, 255, 255, 0.11) 3.65%,
+        rgba(255, 255, 255, 0.12) 56.25%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    pointer-events: none;
+}
+
+.pages__item:hover::before img {
+    backdrop-filter: blur(10px);
+}

@@ -9,12 +9,59 @@
                     <li class="menu__item">
                         <a href="" class="menu__link menu__link_active">Home</a>
                     </li>
-                    <li class="menu__item"><a href="" class="menu__link">Features</a></li>
-                    <li class="menu__item"><a href="" class="menu__link">Pages</a></li>
-                    <li class="menu__item"><a href="" class="menu__link">Support</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Features</a></li>
+                    <li class="menu__item dropdown">
+                        <a href="pages.html" class="menu__link"
+                            >Pages
+                            <svg
+                                width="8"
+                                height="6"
+                                viewBox="0 0 8 6"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0.94 0.5L4 3.59299L7.06 0.5L8 1.45687L4 5.5L0 1.45687L0.94 0.5Z"
+                                    fill="currentColor" />
+                            </svg>
+                        </a>
+                        <ul class="dropdown__menu">
+                            <li><a href="#">Link 1</a></li>
+                            <li><a href="#">Link 2</a></li>
+                            <li><a href="#">Link 3</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="menu__item"><a href="#" class="menu__link">Support</a></li>
                 </ul>
             </nav>
-            <button type="button" class="menu__icon icon-menu"><span></span></button>
+            <div class="header__btns">
+                <a href="#" data-goto="#contact" class="header__btn"
+                    ><svg
+                        width="10"
+                        height="9"
+                        viewBox="0 0 10 9"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M3.28672 4.82432C1.96348 4.82432 0.886719 3.74757 0.886719 2.42432C0.886719 1.10108 1.96348 0.0243225 3.28672 0.0243225C4.60996 0.0243225 5.68672 1.10108 5.68672 2.42432C5.68672 3.74757 4.60996 4.82432 3.28672 4.82432ZM3.28672 0.672971C2.32088 0.672971 1.53537 1.45848 1.53537 2.42432C1.53537 3.39016 2.32088 4.17567 3.28672 4.17567C4.25256 4.17567 5.03807 3.39016 5.03807 2.42432C5.03807 1.45848 4.25256 0.672971 3.28672 0.672971Z"
+                            fill="currentColor" />
+                        <path
+                            d="M6.65967 8.65135H6.01102C6.01102 7.18476 4.81816 5.9919 3.35157 5.9919C1.88497 5.9919 0.692106 7.18476 0.692106 8.65135H0.043457C0.043457 6.82735 1.52757 5.34325 3.35157 5.34325C5.17557 5.34325 6.65967 6.82735 6.65967 8.65135Z"
+                            fill="currentColor" />
+                        <path
+                            d="M9.09944 2.42432H7.11328V3.07297H9.09944V2.42432Z"
+                            fill="currentColor" />
+                        <path
+                            d="M9.0995 4.59989H6.33496V5.24854H9.0995V4.59989Z"
+                            fill="currentColor" />
+                        <path
+                            d="M9.09961 6.83514H7.42285V7.48379H9.09961V6.83514Z"
+                            fill="currentColor" />
+                    </svg>
+                    <span>Request</span></a
+                >
+                <button type="button" class="menu__icon icon-menu"><span></span></button>
+            </div>
         </div>
     </div>
 </header>
