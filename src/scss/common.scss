@@ -1,1 +1,25 @@
 // Заголовки, загальні БЕМ блоки та інше...
+
+// Видалення хрестика в пошуку
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
+
+input[type="search"]::-moz-search-clear-button {
+    display: none;
+}
+// фокус активного інпуту
+input[type="text"] {
+    outline: none;
+}
+
+input[type="text"]:focus {
+    border: 1px solid #816cda;
+}
+input[type="search"] {
+    outline: none;
+}
+
+input[type="search"]:focus {
+    border: 1px solid #816cda;
+}
