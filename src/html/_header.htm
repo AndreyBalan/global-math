@@ -7,7 +7,7 @@
             <nav class="menu__body">
                 <ul class="menu__list">
                     <li class="menu__item">
-                        <a href="index.html" class="menu__link menu__link_active">Home</a>
+                        <a href="index.html" class="menu__link">Home</a>
                     </li>
                     <li class="menu__item">
                         <a href="features.html" class="menu__link">Features</a>
@@ -87,9 +87,11 @@
                             d="M9.09961 6.83514H7.42285V7.48379H9.09961V6.83514Z"
                             fill="currentColor" />
                     </svg>
-                    <span>Request</span></a
+                    <span class="sr-only">go to contact</span> <span>Request</span></a
                 >
-                <button type="button" class="menu__icon icon-menu"><span></span></button>
+                <button type="button" class="menu__icon icon-menu">
+                    <span></span> <span class="sr-only">menu button</span>
+                </button>
             </div>
         </div>
     </div>
